@@ -32,6 +32,24 @@ cargo install --path .
 
 Download from releases (coming soon).
 
+## Agent Installation (SKILL.md)
+
+Agents can install the skill directly from the repo:
+
+```bash
+# Clone the repo
+git clone https://github.com/evilbuck/agentic-todo.git
+cd agentic-todo
+
+# Copy or symlink the skill into the agent's skills directory
+cp -r skills/agentic-todo ~/.hermes/skills/
+
+# Or symlink for easy updates
+ln -sf "$(pwd)/skills/agentic-todo" ~/.hermes/skills/agentic-todo
+```
+
+After installation, the skill is available to any agent that loads skills — it will automatically discover and use `agent-backlogger` from `~/.cargo/bin/`.
+
 ## Quick Start
 
 ```bash
